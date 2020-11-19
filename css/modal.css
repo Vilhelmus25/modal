@@ -20,14 +20,128 @@ header{
     line-height: 3rem;
    /* margin: -0.5rem;  */  /*lehet inline-block kell*/
 }
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex: 0,1,auto;
+}
+
 .h3__title{
     display: inline;
     font-size: 1.25rem;
     margin: 1rem;
 }
+
 .search__btn{
    display: inline;
    float: right;
     font-size: 1.2rem;
-    padding: 2rem, 2rem;
+    padding: 0.3rem;
+    margin-top: 0.3rem;
+    margin-right: 1rem;
+    background-color: rgb(176, 189, 0);
 }
+
+.main__nav{
+    flex: 0,0,100%;
+    background-color: #A55;
+    max-width: 100%;
+    margin: 0, 0;
+}
+.nav__ul{
+    margin-top: 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    height: 100vh;
+}
+
+.li__categories{
+    list-style-type: none;
+    display: block;
+    line-height: 3rem;
+    
+}
+
+.nav__a{
+    pointer-events: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #343;
+    
+}
+
+section{
+    background-color: rgb(56, 252, 252);
+    min-width: 100%;
+}
+.h1__intro{
+    padding: 1rem;
+}
+
+.ps{
+    padding-left: 1rem;
+}
+
+.button__pressStart{
+    background-color: rgb(125, 204, 51);
+    width: 10rem;
+    height: 3rem;
+    font-size: large;
+    border-radius: 30%;
+    box-shadow: 0px, 50px, 50px, #777;
+    
+}
+.button__pressStart:hover{
+    background-color:   rgb(238, 241, 4) ;
+    -webkit-transition : background-color 0.3s linear;
+    -moz-transition : background-color 0.3s linear;
+    -o-transition : background-color 0.3s linear;
+    transition : background-color 0.3s linear;
+}
+.button__pressStart:focus{
+    border-color: rgb(125, 204, 51);
+}
+
+
+/* modal*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal__content {
+      display: inline;
+      position: relative;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/modal.css">
 </head>
 
-<body>
+<body class="body__area">
     <header>
         <h3 class="h3__title">Modal Test</h3>
         <button class="search__btn">
@@ -21,18 +21,18 @@
             <nav class="main__nav">
                 <ul class="nav__ul">
 
-                    <li><a class="nav__a--icon" href="index.html">Introduction</a></li>
+                    <li class="li__categories"><a class="nav__a" href="index.html">Introduction</a></li>
 
-                    <li><a class="nav__a--icon" href="index.html">Innotation</a></li>
-                    <li><a class="nav__a--icon" href="index.html">Images</a></li>
+                    <li class="li__categories"><a class="nav__a" href="index.html">Innotation</a></li>
+                    <li class="li__categories"><a class="nav__a" href="index.html">Images</a></li>
 
-                    <li><a class="nav__a--icon" href="index.html">Config</a></li>
-                    <li><a class="nav__a--icon" href="index.html">Styling</a></li>
+                    <li class="li__categories"><a class="nav__a" href="index.html">Config</a></li>
+                    <li class="li__categories"><a class="nav__a" href="index.html">Styling</a></li>
                 </ul>
             </nav>
         </aside>
         <section>
-            <h1> Introduction </h1>
+            <h1 class="h1__intro"> Introduction </h1>
             <div class="ps">
                 <p class="textContent">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis eos saepe officia corporis placeat
@@ -51,9 +51,31 @@
                     blanditiis libero id recusandae, neque, tempore ipsa consequatur? Illum cum, consectetur voluptatem
                     dicta ratione fuga sed?
                 </p>
-                <button class="pressStart">Press Start!</button>
+                <button class="button__pressStart">Press Start!</button>
             </div>
         </section>
+
+        <div class="modal" id="modal__id">
+            <div class="modal-content">
+                <button class="button__close">
+                    <i id="color__btn" class="fa fa-close"></i>
+                </button>
+                <h2 class="h2__content">
+                    CSSScript.com
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, rem quibusdam velit hic odit veniam
+                    doloribus earum quos ullam consequatur corrupti distinctio ea accusantium quidem autem culpa totam
+                    minima nesciunt.</p>
+
+                <button class="button__okay">
+                    Okay
+                </button>
+                <button class="button__cancel">
+                    Cancel
+                </button>
+            </div>
+
+        </div>
     </main>
 
 
