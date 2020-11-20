@@ -1,10 +1,4 @@
-* {
-    box-sizing: border-box;
-    
-  }
-  html{
-    height:100%;
-  }
+
 body{
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     min-height:100%;
@@ -18,6 +12,7 @@ header{
     background-color: #39c;
     color: rgb(198,198,59);
     line-height: 3rem;
+    margin-right: 20vw;
    /* margin: -0.5rem;  */  /*lehet inline-block kell*/
 }
 
@@ -35,7 +30,6 @@ main{
 }
 
 .search__btn{
-   display: inline;
    float: right;
     font-size: 1.2rem;
     padding: 0.3rem;
@@ -49,13 +43,14 @@ main{
     background-color: #A55;
     max-width: 100%;
     margin: 0, 0;
+    height: 100vh;
 }
 .nav__ul{
     margin-top: 0rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 1rem;
-    height: 100vh;
+    
 }
 
 .li__categories{
@@ -74,9 +69,11 @@ main{
 }
 
 section{
+    width: 100%;                            /* kitölti a rendelkezésére álló helyet, amit a flexxel beállítottunk, nem kell sem min, sem max-width*/
     background-color: rgb(56, 252, 252);
-    min-width: 100%;
+    
 }
+
 .h1__intro{
     padding: 1rem;
 }
@@ -107,36 +104,46 @@ section{
 
 
 /* modal*/
+
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+     
   }
   
-  /* Modal Content/Box */
   .modal__content {
-      display: inline;
-      position: relative;
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    
+    position: fixed;
+    top: 50%;
+    left: 50% ;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
   }
   
-  /* The Close Button */
-  .close {
-    color: #aaa;
+
+  .button__close {
     float: right;
-    font-size: 28px;
-    font-weight: bold;
+        width: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        background-color: lightgray;
+  }
+  .modal__button {
+    float: right;
+        
   }
   
   .close:hover,
@@ -144,4 +151,11 @@ section{
     color: black;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  .show-modal{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
   }
