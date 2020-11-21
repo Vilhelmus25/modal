@@ -61,7 +61,7 @@ main{
 }
 
 .nav__a{
-    pointer-events: none;
+    
     text-decoration: none;
     font-size: 1.2rem;
     color: #343;
@@ -158,4 +158,10 @@ section{
     visibility: visible;
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  }
+
+  @media screen and (max-width: 560px) {
+    .modal__content{
+        width: 12rem;
+    }
   }
